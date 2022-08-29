@@ -11,12 +11,19 @@ body {
 /* --------------------------------------------------------------------------------- */
 /*#region UTILITIES */ 
 /* ------------------------------------------ */
-/*#region aesthetic elements */
+/* aesthetic elements */
 .flow > * + * {
     margin-top: var(--flow-spacing);
 }
-/*#endregion aesthetic elements */
 
+/* ------------------------------------------ */
+/* Icons */
+.icon::before,
+.icon::after {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
 /*#endregion UTILITIES */
 /* --------------------------------------------------------------------------------- */
 
@@ -45,6 +52,55 @@ body {
     width: 40%;
     max-width: 200px;
 }
+
+.ms_header-content {
+    position: relative;
+    color: var(--clr-primary);
+}
+
+.ms_header-content::after,
+.ms_header-content::before {
+    font: var(--fa-font-solid);
+    font-size: calc(1.75rem + 1.5vw);
+    position: absolute;
+        top: 0;
+    animation: blink-caret 800ms step-end;
+    animation-iteration-count: 10;
+}
+
+.ms_header-content::before {
+    content: '\f053';
+    left: -1.5rem;
+}
+
+.ms_header-content::after {
+    content: '\f054';
+    right: -1.2rem;
+}
+
+.ms_typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .20em; /* Adjust as needed */
+    width: 0%;
+    animation: 
+        typing 2000ms steps(15, end) 2000ms;
+    animation-fill-mode: forwards;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { color: transparent; }
+    50% { color: var(--clr-primary); }
+}
+
 /*#endregion header */
 
 /* --------------------------------------------------- */
@@ -145,5 +201,13 @@ body {
         transform: translate(0, 50%) rotate(-90deg);
     }
 }
+
+@media only screen and  (min-width: 1200px) {
+    .ms_header-content::after,
+    .ms_header-content::before {
+        font-size: 3rem;
+    }
+}
+
 /*#endregion MEDIA QUERIES */
 /* --------------------------------------------------------------------------------- */

@@ -2,6 +2,8 @@
 
 ## Version
 
+### 0.3: Added Title animation
+
 ### 0.2.1: Added Carousel Navigation thumbnails
 
 ### 0.2: Created functional carousel

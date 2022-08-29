@@ -2,8 +2,8 @@
 /* These are some generic design choices for colour schemes, fonts, gutters and gaps */
 :root {
     /* Color Schemes: the ones preceded by bs are modifications of bootstrap root custom properties */
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
+    --clr-primary: rgb(255, 155, 23);
+    --clr-secondary: #6c757d;
     --clr-accent: #8b1428;
     /* --bs-success: #198754;
     --bs-info: #0dcaf0;
