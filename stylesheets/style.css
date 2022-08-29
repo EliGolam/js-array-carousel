@@ -48,7 +48,7 @@ body {
 /*#endregion header */
 
 /* --------------------------------------------------- */
-/*#region Carousel */
+/*#region Carousel-images */
 .ms_carousel {
     position: relative;
     width: 100%;
@@ -103,8 +103,29 @@ body {
 :is(.ms_carousel-previous, .ms_carousel-next) .btn:hover {
     transform: scale(1.3);
 }
-
 /*#endregion Carousel */
+
+/* --------------------------------------------------- */
+/*#region Carousel-nav */
+.ms_carousel-nav-img {
+    object-fit: cover;
+    height: 100%;
+    opacity: .4;
+    transition: 
+        opacity 500ms ease,
+        transform 400ms ease;
+}
+
+.ms_carousel-nav-img:hover {
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+.ms_carousel-nav-img.active {
+    opacity: 1;
+}
+/*#endregion Carousel-nav */
+
 /*#endregion BLOCKS: component specific rules */
 /* --------------------------------------------------------------------------------- */
 

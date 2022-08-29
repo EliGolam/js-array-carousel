@@ -59,36 +59,68 @@
     <main>
         <!-- Container for the carousel -->
         <div class="container ms_main-container">
-            <!--#region carousel -->
-            <div id="carousel" class="ms_carousel">
-                <div class="ms_carousel-images rounded-3">
-                    <img class="ms_carousel-item active img-fluid mx-auto" src="./assets/img/01.jpg" alt="Person sitting at a lake's pier">
-                    <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/02.jpg" alt="Scenic Village on the shore of a lake">
-                    <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/03.jpg" alt="European city skyline">
-                    <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/04.jpg" alt="European city skyline at night">
-                    <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/05.jpg" alt="View of the ocean from treetops">
-                </div>
-
-                <div class="ms_carousel-buttons">
-                    <div class="ms_carousel-previous">
-                        <div class="ms_carousel-button-bg"></div>
-                        <button class="btn btn-primary bg-transparent border-0 text-light" type="button" role="button" aria-label="Previous">
-                            <svg class="bi bi-chevron-up fs-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1e," fill="currentColor" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-                            </svg>
-                        </button>
+            <!--#region section carousel -->
+            <section id="carousel" class="d-flex flex-column align-items-center w-100">
+                <h2>Carousel Practice</h2>
+            
+                <!--#region: carousel-images -->
+                <div class="ms_carousel">
+                    <div class="ms_carousel-images rounded-3">
+                        <img class="ms_carousel-item active img-fluid mx-auto" src="./assets/img/01.jpg" alt="Person sitting at a lake's pier">
+                        <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/02.jpg" alt="Scenic Village on the shore of a lake">
+                        <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/03.jpg" alt="European city skyline">
+                        <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/04.jpg" alt="European city skyline at night">
+                        <img class="ms_carousel-item img-fluid mx-auto" src="./assets/img/05.jpg" alt="View of the ocean from treetops">
                     </div>
 
-                    <div class="ms_carousel-next">
-                        <button class="btn btn-primary bg-transparent border-0 text-light" type="button" role="button" aria-label="Next">
-                            <svg class="bi bi-chevron-down fs-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
+                    <div class="ms_carousel-buttons">
+                        <div class="ms_carousel-previous">
+                            <div class="ms_carousel-button-bg"></div>
+                            <button class="btn btn-primary bg-transparent border-0 text-light" type="button" role="button" aria-label="Previous">
+                                <svg class="bi bi-chevron-up fs-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1e," fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="ms_carousel-next">
+                            <button class="btn btn-primary bg-transparent border-0 text-light" type="button" role="button" aria-label="Next">
+                                <svg class="bi bi-chevron-down fs-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                </div>
+                    <!--#endregion: carousel-images -->
+
+                    <!--#region: carousel-nav -->
+                    <nav class="ms_carousel-nav mt-2">
+                        <h3 class="visually-hidden">Carousel Thumbnails</h3>
+
+                        <div class="container">
+                            <div class="row ms_carousel-nav-content">
+                                <a class="ms_carousel-nav-item col p-0" href="#">
+                                    <img class="ms_carousel-nav-img active img-thumbnail border-0" role="img" src="./assets/img/01.jpg" alt="Person sitting at a lake's pier">
+                                </a>
+                                <a class="ms_carousel-nav-item col p-0" href="#">
+                                    <img class="ms_carousel-nav-img img-thumbnail border-0" role="img" src="./assets/img/02.jpg" alt="Scenic Village on the shore of a lake">
+                                </a>
+                                <a class="ms_carousel-nav-item col p-0" href="#">
+                                    <img class="ms_carousel-nav-img img-thumbnail border-0" role="img" src="./assets/img/03.jpg" alt="European city skyline">
+                                </a>
+                                <a class="ms_carousel-nav-item col p-0" href="#">
+                                    <img class="ms_carousel-nav-img img-thumbnail border-0" role="img" src="./assets/img/04.jpg" alt="European city skyline at night">
+                                </a>
+                                <a class="ms_carousel-nav-item col p-0" href="#">
+                                    <img class="ms_carousel-nav-img img-thumbnail border-0" role="img" src="./assets/img/05.jpg" alt="View of the ocean from treetops">
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                    <!--#endregion: carousel-nav -->
+                </section>
             </div>
-            <!--#endregion carousel -->
+            <!--#endregion section carousel -->
         </div>
     </main>
     <!--#endregion: MAIN -->

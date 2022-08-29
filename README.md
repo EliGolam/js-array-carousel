@@ -2,6 +2,8 @@
 
 ## Version
 
+### 0.2.1: Added Carousel Navigation thumbnails
+
 ### 0.2: Created functional carousel
 
 * Funtioning JS script implement
