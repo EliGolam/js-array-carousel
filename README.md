@@ -1,2 +1,1 @@
-# js-array-carousel
-Exercise Boolean: Array Carousel
+# Exercise Boolean: Array Carousel
