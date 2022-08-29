@@ -2,6 +2,8 @@
 
 ## Version
 
+### 0.1.1: Added interactive buttons
+
 ### 0.1: Setup
 
 * Initial Setup
