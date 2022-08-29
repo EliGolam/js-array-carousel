@@ -2,6 +2,8 @@
 
 ## Version
 
+### 0.4: Created loading animation: 
+
 ### 0.3: Added Title animation
 
 ### 0.2.1: Added Carousel Navigation thumbnails

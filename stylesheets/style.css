@@ -30,6 +30,13 @@ body {
 
 /* --------------------------------------------------------------------------------- */
 /*#region COMPOSITION */
+header {
+    position: fixed;
+        top: 35%;
+
+    animation: header-move var(--anim-duration) ease var(--anim-duration) forwards;
+}
+
 .ms_header-container{
     margin-top: 2rem;
 }
@@ -39,6 +46,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translate(0, -5%);
+    opacity: 0;
+
+    animation: main-appear var(--anim-duration) ease calc(var(--anim-duration) + var(--anim-short)) forwards;
+}
+
+@keyframes main-appear {
+    from { opacity: 0; }
+    to {opacity: 1;}
+}
+
+@keyframes header-move {
+    to {
+        top: 0;
+    }
 }
 /*#endregion COMPOSITION */
 /* --------------------------------------------------------------------------------- */
@@ -64,7 +86,7 @@ body {
     font-size: calc(1.75rem + 1.5vw);
     position: absolute;
         top: 0;
-    animation: blink-caret 800ms step-end;
+    animation: blink-caret var(--anim-short) step-end;
     animation-iteration-count: 10;
 }
 
@@ -85,7 +107,7 @@ body {
     letter-spacing: .20em; /* Adjust as needed */
     width: 0%;
     animation: 
-        typing 2000ms steps(15, end) 2000ms;
+        typing var(--anim-duration) steps(15, end) var(--anim-short);
     animation-fill-mode: forwards;
 }
 

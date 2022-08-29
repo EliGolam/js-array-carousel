@@ -30,4 +30,8 @@
     --lg-breakpoint: 992px;
     --xl-breakpoint: 1200px;
     --xxl-breakpoint: 1400px; */
+
+    /* Animations times */
+    --anim-duration: 2000ms;
+    --anim-short: 800ms;
 }
