@@ -1,0 +1,71 @@
+/* --------------------------------------------------------------------------------- */
+/*#region GENERAL DEFAULTS  */
+body {
+    font: var(--fontweight-default) var(--fontsize-default) var(--fontfamily-default);
+    columns: var(--clr-dark-grey);
+}
+
+/*#endregion GENERAL DEFAULTS  */
+/* --------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------- */
+/*#region UTILITIES */ 
+/* ------------------------------------------ */
+/*#region aesthetic elements */
+.flow > * + * {
+    margin-top: var(--flow-spacing);
+}
+/*#endregion aesthetic elements */
+
+/*#endregion UTILITIES */
+/* --------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------- */
+/*#region COMPOSITION */
+.ms_header-container{
+    margin-top: 2rem;
+}
+
+.ms_main-container {
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+}
+/*#endregion COMPOSITION */
+/* --------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------- */
+/*#region BLOCKS: component specific rules */
+/* --------------------------------------------------- */
+/*#region header */
+.ms_header-logo {
+    width: 40%;
+    max-width: 200px;
+}
+/*#endregion header */
+
+/* --------------------------------------------------- */
+/*#region Carousel */
+.ms_carousel-item {
+    object-fit: cover;
+
+    display: none;
+}
+
+.ms_carousel-item.active {
+    display: block;
+}
+/*#endregion Carousel */
+/*#endregion BLOCKS: component specific rules */
+/* --------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------- */
+/*#region MEDIA QUERIES */
+/* @media only screen and (max-width: 1000px) {
+
+} */
+/*#endregion MEDIA QUERIES */
+/* --------------------------------------------------------------------------------- */
