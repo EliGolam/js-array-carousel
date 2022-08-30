@@ -2,6 +2,17 @@
 
 ## Version
 
+### Nigthly branch: 0.9: Created Full screen carousel
+
+* Added proper image assets
+* added responsiveness to images 
+* fixed animations for full screen
+
+#### Known bugs
+
+* Navigation buttons don't work well
+* Navigation buttons only affect a small size
+
 ### 0.4: Created loading animation
 
 ### 0.3: Added Title animation

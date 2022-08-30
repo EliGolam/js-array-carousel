@@ -42,11 +42,10 @@ header {
 }
 
 .ms_main-container {
-    min-height: 100vh;
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(0, -5%);
     opacity: 0;
 
     animation: main-appear var(--anim-duration) ease calc(var(--anim-duration) + var(--anim-short)) forwards;
@@ -77,10 +76,9 @@ header {
 
 .ms_header-content {
     position: relative;
-    color: var(--clr-primary);
 }
 
-.ms_header-content::after,
+/* .ms_header-content::after,
 .ms_header-content::before {
     font: var(--fa-font-solid);
     font-size: calc(1.75rem + 1.5vw);
@@ -98,7 +96,7 @@ header {
 .ms_header-content::after {
     content: '\f054';
     right: -1.2rem;
-}
+} */
 
 .ms_typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -127,24 +125,24 @@ header {
 
 /* --------------------------------------------------- */
 /*#region Carousel-images */
-.ms_carousel {
+.ms_carousel-container {
+    height: 100vh;
     position: relative;
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 16 / 9;
 }
 
+.ms_carousel,
 .ms_carousel-images {
-    position: relative;
+    width: 100%;
     height: 100%;
-
-    overflow: hidden;
 }
 
 .ms_carousel-item {
     position: absolute;
+        top: 0;
+
     width: 100%;
     height: 100%;
+    object-fit: cover;
 
     opacity: 0;
     filter: blur(5px);
@@ -156,6 +154,10 @@ header {
 .ms_carousel-item.active {
     opacity: 1;
     filter: blur(0);
+}
+
+.ms_carousel-btn {
+    font-size: 4rem;
 }
 
 .ms_carousel-previous {
@@ -185,9 +187,21 @@ header {
 
 /* --------------------------------------------------- */
 /*#region Carousel-nav */
+.ms_carousel-nav {
+    position: absolute;
+        left: 50%;
+        bottom: 20px;
+        z-index: 3;
+    transform: translate(-50%, 0);
+    height: 20vh;
+}
+
 .ms_carousel-nav-img {
     object-fit: cover;
-    height: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background-color: transparent;
     opacity: .4;
     transition: 
         opacity 500ms ease,
@@ -233,3 +247,15 @@ header {
 
 /*#endregion MEDIA QUERIES */
 /* --------------------------------------------------------------------------------- */
+
+/* DEBUG */
+/* Remove animations */
+/* *,
+*::after,
+*::before {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+} */
