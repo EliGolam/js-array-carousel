@@ -2,7 +2,7 @@
 
 ## Version
 
-### 0.4: Created loading animation: 
+### 0.4: Created loading animation
 
 ### 0.3: Added Title animation
 
