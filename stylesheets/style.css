@@ -160,7 +160,16 @@ header {
     font-size: 4rem;
 }
 
-.ms_carousel-previous {
+.ms_carousel-buttons {
+    position: absolute;
+        top: 0;
+        z-index: 2;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* .ms_carousel-previous {
     position: absolute;
         top: 0;
         left: 50%;
@@ -182,6 +191,11 @@ header {
 
 :is(.ms_carousel-previous, .ms_carousel-next) .btn:hover {
     transform: scale(1.3);
+} */
+
+.ms_previous-back,
+.ms_next-right {
+    display: none;
 }
 /*#endregion Carousel */
 
@@ -189,17 +203,18 @@ header {
 /*#region Carousel-nav */
 .ms_carousel-nav {
     position: absolute;
-        left: 50%;
-        bottom: 20px;
-        z-index: 3;
-    transform: translate(-50%, 0);
-    height: 20vh;
+        right: 0;
+        top: 0;
+        z-index: 2;
+
+    display: flex;
+    align-items: center;
 }
 
 .ms_carousel-nav-img {
     object-fit: cover;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 9 / 16;
 
     background-color: transparent;
     opacity: .4;
@@ -209,7 +224,7 @@ header {
 }
 
 .ms_carousel-nav-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     opacity: .8;
 }
 
@@ -225,16 +240,26 @@ header {
 /* --------------------------------------------------------------------------------- */
 /*#region MEDIA QUERIES */
 @media only screen and (min-width: 768px) {
-    .ms_carousel-previous {
+    /* .ms_carousel-previous {
         left: 0;
         top: 50%;
-        transform: translate(0, -50%) rotate(-90deg);
+        transform: translate(0, -50%);
     }
 
     .ms_carousel-next {
         right: 0;
         bottom: 50%;
-        transform: translate(0, 50%) rotate(-90deg);
+        transform: translate(0, 50%);
+    } */
+
+    .ms_previous-back,
+    .ms_next-right {
+        display: inline-block;
+    }
+
+    .ms_previous-up,
+    .ms_next-down {
+        display: none;
     }
 }
 

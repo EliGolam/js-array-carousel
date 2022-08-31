@@ -2,6 +2,13 @@
 
 ## Version
 
+### Nigthly branch: 0.9.1: Improved JS function
+
+#### Known Issues
+
+* Layout is broken
+* Buttons overlaying the thumbnails
+
 ### Nigthly branch: 0.9: Created Full screen carousel
 
 * Added proper image assets

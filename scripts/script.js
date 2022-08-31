@@ -15,50 +15,55 @@ const carouselBtnNext = document.querySelector('.ms_carousel-next');
 // Carousel Previous 
 carouselBtnPrev.addEventListener('click', () => {
     console.log('DEBUG - BtnPrev: Previous');
-
-    // Find currently active image
-    for(let i = 0; i < carouselImg.length; i++) {
-        if (carouselImg[i].classList.contains('active')){
-            if (i === 0) {
-                carouselImg[carouselImg.length - 1].classList.add('active');
-                carouselNav[carouselImg.length - 1].classList.add('active');
-            } else {
-                carouselImg[i - 1].classList.add('active');
-                carouselNav[i - 1].classList.add('active');
-            }
-
-            carouselImg[i].classList.remove('active');
-            carouselNav[i].classList.remove('active');
-            break;
-        }
-    }
+    moveCarousel(carouselImg, carouselNav, 'previous');
 })
 
 // Carousel Next 
 carouselBtnNext.addEventListener('click', () => {
     console.log('DEBUG - BtnNext: Next');
+    moveCarousel(carouselImg, carouselNav, 'next');
+})
 
-    // Find currently active image
-    for (let i = 0; i < carouselImg.length; i++) {
-        if (carouselImg[i].classList.contains('active')) {
-            if (i === carouselImg.length - 1) {
-                carouselImg[0].classList.add('active');
-                carouselNav[0].classList.add('active');
-            } else {
-                carouselImg[i + 1].classList.add('active');
-                carouselNav[i + 1].classList.add('active');
+
+function moveCarousel (imgs, nav, direction) {
+    for (let i = 0; i < imgs.length; i++) {
+        console.log('DEBUG - renderImages: OK!');
+        // Define direction: 
+        direction = (direction === 'previous' || direction === 'back' || direction === -1) ? -1 : 1;
+        let position;
+
+        // Find currently active image
+        if ( imgs[i].classList.contains('active') ) {
+            // When active image is found we need to make sure the new image will not be out of bounds
+            switch (i + direction) {
+                case (imgs.length): {
+                    position = 0;
+                    break;
+                }
+                case (-1): {
+                    position = imgs.length - 1;
+                    break;
+                }
+                default: {
+                    position = i + direction;
+                }
             }
 
-            carouselImg[i].classList.remove('active');
-            carouselNav[i].classList.remove('active');
+            // Activate new image on carousel trhough position
+            imgs[position].classList.add('active');
+            nav[position].classList.add('active');
+
+            // Remove previously active image
+            imgs[i].classList.remove('active');
+            nav[i].classList.remove('active');
             break;
         }
     }
-})
+}
 
 // **************************************************************************
 // CAROUSEL NAVIGATION
-for (let i = 0; i < carouselNav.length; i++) {
+for (let i = 0; i < carouselImg.length; i++) {
     carouselNav[i].addEventListener('click', () => {
         console.log('DEBUG - carouselNav Click: OK!');
 
@@ -74,4 +79,7 @@ for (let i = 0; i < carouselNav.length; i++) {
         carouselNav[i].classList.add('active');
     })
 }
+
+// ***************************************************************************
+
 
